@@ -25,6 +25,7 @@ public class UIController : MonoBehaviour
 
     public void PlayAgain()
     {
+        //Since we have a preset board, we have a set start, so we can reload the scene upon a reset.
         SceneManager.LoadScene("SampleScene");
     }
 }

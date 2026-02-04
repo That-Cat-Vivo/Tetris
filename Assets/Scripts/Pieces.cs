@@ -118,6 +118,7 @@ public class Pieces : MonoBehaviour
             new Vector2Int(1, -1),
         };
 
+        //Both lowt and BIGJ have points where a wallKickOffset of 2 is required. So we just include that in this if statement.
         if(data.tetronimo == Tetronimo.I || data.tetronimo == Tetronimo.lowt || data.tetronimo == Tetronimo.BIGJ)
         {
             wallKickOffsets.Add(2 * Vector2Int.left);

@@ -83,6 +83,7 @@ public class Board : MonoBehaviour
 
     public void UpdateGameOver()
     {
+        //Track if gameOver has happened more than once, this allows preset board as well as a proper game over.
         if(!tetrisManager.gameOver && gameOverAmount != 1)
         {
             gameOverAmount++;
@@ -116,6 +117,8 @@ public class Board : MonoBehaviour
 
     public void SpawnPiece()
     {
+        //Piece steps track which step of the game we're on, choosing the required piece
+        //Then we add 1 to pieceStep
         if (pieceStep == 0)
         {
             activePiece = Instantiate(prefabPiece);
@@ -196,7 +199,7 @@ public class Board : MonoBehaviour
         }
 
 
-        //OG code
+        //Once the final step is completed, we move on to normal gameplay. pieceStep 6 utilizes the OG spawn code
         else if (pieceStep == 6)
         {
             activePiece = Instantiate(prefabPiece);
